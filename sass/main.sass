@@ -1,0 +1,317 @@
+@import '_variables.sass'
+body
+   font-family: 'Inter', sans-serif
+   box-sizing: border-box
+   margin: 0
+h1, h2, h3, h4, p
+    margin: 0
+.container
+    max-width: 1277px
+    margin: 0 auto
+    
+
+
+.registration
+    &-wrapper
+        display: flex
+    &-img
+        width: 666px
+        padding: 64px 111px 420px 82px
+        box-sizing: border-box
+        background: url(../img/frame1.jpg)
+        margin-bottom: -3px
+        position: relative
+        &__logo
+            margin-bottom: 276px
+        &__sqwer
+            position: absolute
+            top: 212px
+            left: 415px
+        &__coma
+            position: absolute
+            top: 330px
+            left: 82px
+            color: #00DAF7
+            font-style: normal;
+            font-weight: bold;
+            font-size: 96px;
+
+
+        &__description
+            color: #ffffff
+            
+            p
+                font-size: 20px
+                font-weight: 400
+                line-height: 38px
+                margin-bottom: 22px
+            h3 
+                font: $font-size-m
+        &__ygol
+            position: absolute
+            top: 639px
+            left: 484px
+        &__cirkl
+            position: absolute
+            top: 870px
+            left: 10px
+    &-form
+        padding: 
+            top: 75px
+            right: 47px
+            bottom: 75px
+            left: 45px
+        width: 771px
+        box-sizing: border-box
+        &__breadcrumbs
+            display: flex
+            align-items: center
+            justify-content: space-between
+            
+            svg
+                margin-right: 14px
+            div:nth-child(1)
+                display: flex
+                align-items: center
+                color: #8692a6
+                font-size: 16px
+                font-weight: 500
+            div:nth-child(2)
+                display: flex
+                flex-direction: column
+                align-items: flex-end
+                font-size: 14px
+                font-weight: 500
+                color: #bdbdbd
+                text-transform: uppercase
+                span:nth-child(2)
+                    color: #8692a6
+                    font-size: 16px
+                    font-weight: 500
+                    text-transform: capitalize
+                    margin-top: 4px
+        &__block
+            
+            padding: 
+                top: 74px
+                left: 64px
+                bottom: 0
+            max-width: 426px
+        &__title
+            font-size: 30px
+            font-weight: 600
+            color: #000
+        &__subtitle
+            font: $font-size-m
+                
+.registation-form__forms
+    
+    display: flex
+    flex-direction: column
+    div
+        display: flex
+        flex-direction: column
+        margin-top: 24px
+        &:nth-child(4)
+            flex-direction: row
+            align-items: center
+            
+            
+            
+            
+            
+        label
+            font-size: 16px
+            font-weight: 500
+            color: #696f79
+        input
+            margin-top: 24px
+            padding: 23px 0px 24px 30px
+            border-radius: 6px
+            border: 1px solid #8696a6
+            outline: none
+            font-size: 14px
+            font-weight: 600
+            color: #494949
+            &::placeholder
+                font-size: 14px
+                font-weight: 500
+                color: #8696a6
+            &:focus
+                border-color: #1565d8
+
+            
+        /* стилизация чекбокса */
+        input[type="checkbox"]
+            margin: 0 14px 0 0
+            background-color: red
+            width: 8px
+            height: 8px
+        .custom-checkbox
+            position: absolute
+            z-index: -1
+            opacity: 0
+            &+
+                label
+                    display: inline-flex
+                    align-items: center
+                    user-select: none
+                    cursor: pointer
+                    &::before
+                        content: ''
+                        display: inline-block
+                        width: 16px
+                        height: 16px
+                        flex-shrink: 0
+                        flex-grow: 0
+                        border: 1px solid #adb5b
+                        border-radius: 4px
+                        margin-right: 14px
+                        background-repeat: no-re
+                        background-position: cen
+                        background-size: 50% 50%
+        .custom-checkbox:checked+label::before
+            border-color: #0b76ef
+            background-color: #0b76ef
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e")
+        /* стилизация радио баттона */
+        %button-base
+            border-radius: 6px
+            border: 0
+            margin-bottom: 16px
+            padding: 24px 0
+            outline: none
+            cursor: pointer
+            font-size: 16px
+            font-weight: 600
+            display: flex
+            align-items: center
+            justify-content: center
+            position: relative
+            font-family: "Inter", sans-serif //фикс для отображения в Firefox v.88
+        .button-blue
+            background-color: #1565d8
+            color: #ffffff
+            @extend %button-base
+        .button-white
+            background-color: #ffffff
+            color: #000000
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08)
+            @extend %button-base
+            img
+                position: absolute
+                left: 48px
+        %line-base
+            display: block
+            content: ''
+            width: 172px
+            height: 1px
+            background-color: #f7f7f7
+            position: absolute
+            top: 50%
+            margin-top: -0.5px
+        span
+            text-align: center
+            padding: 25px 0
+            font-size: 12px
+            color: #bababa
+            position: relative
+            &::before
+                @extend %line-base 
+                left: 0
+            &::after
+                @extend %line-base
+                right: 0 
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        
+
+        
+        
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+
+
+                
+
+    
+
+
+
+
+
+
